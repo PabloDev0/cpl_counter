@@ -1,0 +1,19 @@
+{
+  "jour": 7,
+  "elements": [
+    { "titre": "Droit aérien 010", "currentPage": 84, "nbPageParJour": 12, "nbPageTotal": 354 },
+    { "titre": "Cellule et systèmes 021-1", "currentPage": 84, "nbPageParJour": 12, "nbPageTotal": 346 },
+    { "titre": "Motorisation 021-2", "currentPage": 99, "nbPageParJour": 14, "nbPageTotal": 422 },
+    { "titre": "Électricité et équip de secours 021-3", "currentPage": 57, "nbPageParJour": 8, "nbPageTotal": 220 },
+    { "titre": "Instrumentation 022", "currentPage": 185, "nbPageParJour": 15, "nbPageTotal": 454 },
+    { "titre": "Masse et centrage 031", "currentPage": 36, "nbPageParJour": 5, "nbPageTotal": 150 },
+    { "titre": "Préparation de vol 033", "currentPage": 100, "nbPageParJour": 9, "nbPageTotal": 256 },
+    { "titre": "Performance humaine 040", "currentPage": 57, "nbPageParJour": 8, "nbPageTotal": 240 },
+    { "titre": "Météorologie 050", "currentPage": 77, "nbPageParJour": 11, "nbPageTotal": 318 },
+    { "titre": "Navigation 061", "currentPage": 35, "nbPageParJour": 5, "nbPageTotal": 146 },
+    { "titre": "Radionavigation 062", "currentPage": 49, "nbPageParJour": 7, "nbPageTotal": 210 },
+    { "titre": "Procédure opérationnellles 070", "currentPage": 56, "nbPageParJour": 8, "nbPageTotal": 244 },
+    { "titre": "Principe de vol 082", "currentPage": 57, "nbPageParJour": 8, "nbPageTotal": 228 },
+    { "titre": "Communications 090", "currentPage": 49, "nbPageParJour": 7, "nbPageTotal": 184 }
+  ]
+}

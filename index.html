@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPL-H — Suivi de lecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <div>
+            <h1 class="site-title">CPL-H Progression</h1>
+            <p class="site-sub">Progression quotidienne — 14 modules</p>
+        </div>
+        <div class="day-block">
+            <button class="btn-day" id="btnDayMinus" title="Revenir au jour précédent">-</button>
+            <span class="day-label">Jour</span>
+            <span class="day-num" id="dayNum">1</span>
+            <button class="btn-day" id="btnDay" title="Passer au jour suivant">+</button>
+        </div>
+    </header>
+
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="slabel">Pages aujourd'hui</div>
+            <div class="sval" id="statToday">—</div>
+        </div>
+        <div class="stat-card">
+            <div class="slabel">Pages lues au total</div>
+            <div class="sval" id="statRead">—</div>
+        </div>
+        <div class="stat-card">
+            <div class="slabel">Progression globale</div>
+            <div class="sval" id="statGlobal">—</div>
+        </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+</div>
+
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-sub" id="modalSub"></div>
+        <div class="modal-range">
+            <input type="number" id="pageInput" min="0" step="1">
+        </div>
+        <div class="hint" id="modalHint"></div>
+        <div class="modal-actions">
+            <button class="btn-cancel" id="btnCancel">Annuler</button>
+            <button class="btn-save" id="btnSave">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
