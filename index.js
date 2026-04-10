@@ -96,7 +96,8 @@ function renderCards(state) {
     state.books.forEach((book, i) => {
         const p      = pct(book);
         const badge  = getBadge(book, state.day);
-        const target = book.currentPage >= book.dailyPages * state.day ? book.dailyPages * (state.day+1) : book.dailyPages * state.day  //Math.min(book.currentPage + book.dailyPages, book.totalPages);
+        const dayTarget = book.dailyPages * (book.currentPage >= book.dailyPages * state.day ? state.day + 1 : state.day);
+        const targetLabel = book.currentPage >= dayTarget ? 'En avance !' : dayTarget < book.totalPages ? 'p. ' + dayTarget : 'Fini !';
         const color  = progressColor(p);
 
         const card = document.createElement('div');
@@ -127,7 +128,7 @@ function renderCards(state) {
         </div>
         <div class="meta-item" style="align-items:flex-end">
           <span class="meta-label">Objectif</span>
-          <span class="meta-target">${book.currentPage >= (book.dailyPages * state.day)+book.dailyPages ? 'En avance !' : target < book.totalPages ? 'p. ' + target : 'Fini !'}</span>
+          <span class="meta-target">${targetLabel}</span>
         </div>
       </div>
     `;
