@@ -85,7 +85,7 @@ function renderStats(state) {
 
     document.getElementById('dayNum').textContent    = state.day;
     document.getElementById('statToday').textContent = totalToday + ' pages';
-    document.getElementById('statRead').textContent  = totalRead.toLocaleString('fr-FR');
+    document.getElementById('statRead').textContent  = `${totalRead.toLocaleString('fr-FR')} / 3772`;
     document.getElementById('statGlobal').textContent = globalPct + '%';
 }
 
