@@ -96,7 +96,7 @@ function renderCards(state) {
     state.books.forEach((book, i) => {
         const p      = pct(book);
         const badge  = getBadge(book, state.day);
-        const target = Math.min(book.currentPage + book.dailyPages, book.totalPages);
+        const target = book.currentPage >= book.dailyPages * state.day ? book.dailyPages * (state.day+1) : book.dailyPages * state.day  //Math.min(book.currentPage + book.dailyPages, book.totalPages);
         const color  = progressColor(p);
 
         const card = document.createElement('div');
