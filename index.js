@@ -153,7 +153,7 @@ function openModal(i) {
     const input = document.getElementById('pageInput');
     input.min   = book.currentPage;
     input.max   = book.totalPages;
-    input.value = Math.min(book.currentPage + book.dailyPages, book.totalPages);
+    input.value =  book.dailyPages * appState.day
 
 
     document.getElementById('modalTitle').textContent = book.title;
@@ -162,7 +162,7 @@ function openModal(i) {
 
 
     document.getElementById('modalHint').textContent  =
-        `Objectif du jour : p. ${Math.min(book.currentPage + book.dailyPages, book.totalPages)} · Total : ${book.totalPages} pages`;
+        `Objectif du jour : p. ${book.dailyPages * appState.day} · Total : ${book.totalPages} pages`;
 
     document.getElementById('overlay').classList.add('open');
 }
