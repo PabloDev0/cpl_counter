@@ -81,7 +81,6 @@ function renderStats(state) {
     const totalToday  = state.books.reduce((acc, b) => acc + (b.currentPage < b.totalPages ? b.dailyPages : 0), 0);
     const totalRead   = state.books.reduce((acc, b) => acc + b.currentPage, 0);
     const totalPages  = state.books.reduce((acc, b) => acc + b.totalPages, 0);
-    const done        = state.books.filter(b => b.currentPage >= b.totalPages).length;
     const globalPct   = Math.round((totalRead / totalPages) * 100);
 
     document.getElementById('dayNum').textContent    = state.day;
