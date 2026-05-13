@@ -50,7 +50,7 @@ function progressColor(p) {
     if (p >= 80) return '#22c55e';
     if (p >= 50) return '#3b82f6';
     return '#fff';
-    return '#fff';
+
 }
 
 function accentColor(p) {
