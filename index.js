@@ -46,8 +46,10 @@ function pct(book) {
 }
 
 function progressColor(p) {
+    if (p === 100) return 'rgba(26,80,170,0.2)';
     if (p >= 80) return '#22c55e';
     if (p >= 50) return '#3b82f6';
+    return '#fff';
     return '#fff';
 }
 
@@ -75,7 +77,7 @@ function getActiveIndex(state) {
     );
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
+
 
 function renderStats(state) {
     const totalToday  = state.books.reduce((acc, b) => acc + (b.currentPage < b.totalPages ? b.dailyPages : 0), 0);
@@ -97,7 +99,7 @@ function renderCards(state) {
         const p      = pct(book);
         const badge  = getBadge(book, state.day);
         const dayTarget = book.dailyPages *  state.day;
-        const targetLabel = book.currentPage - dayTarget > 0 ? 'En avance !' : book.currentPage - dayTarget === 0 ? book.dailyPages *  (state.day+1) : dayTarget < book.totalPages ? 'p. ' + dayTarget : 'Fini !';
+        const targetLabel = book.currentPage === book.totalPages ? 'Fini !' : book.currentPage - dayTarget === 0 ? book.dailyPages *  (state.day+1) : book.currentPage - dayTarget > 0 ? 'En avance !' : dayTarget < book.totalPages ? 'p. ' + dayTarget : '';
         const color  = progressColor(p);
 
         const card = document.createElement('div');
